@@ -1,0 +1,2 @@
+# yesCodewars
+Smash the Algorithm
