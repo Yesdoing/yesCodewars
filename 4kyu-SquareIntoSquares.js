@@ -23,6 +23,12 @@ The function "decompose" will take a positive integer n and return the decomposi
 Note for Bash
 decompose 50 returns "1,3,5,8,49"
 decompose 4  returns "Nothing"
+
+3줄 요약:
+1. 처음에는 정사각형의 한 변을 구하는 탐색 과정을 이진 탐색으로 찾을려고 하다가 수를 찾는 과정이 너무 비효율적으로 느껴졌다. 
+2. 문제에선 xk를 대부분 k-1로 나타난다고 하여서 수를 뺀 후 그 뺀 수 에 루트를 쓰면 나머지 값에서 나올 수 있는 최적의 값이 나올거라 생각하였다. 
+3. 위의 풀이 대로하면 정답을 나왔으나 시간 초과가 떠서 최적화를 위해 for문에서 너무 불필요한 연산을 제거하기 위해 반복 횟수를 줄였으나 그래도 시간 초과가 발생하였다.
+4. for문은 n에서 감소해나가니까 최초의 답을 구하면 그 답이 최고 값이라 생각되서 값을 구하자마자 반복문을 탈출시켜 시간 초과를 해결할 수 있었다.
 */
 
 function decompose(n) {
